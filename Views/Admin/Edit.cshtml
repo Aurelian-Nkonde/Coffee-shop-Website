@@ -1,0 +1,44 @@
+@model MvcCoffee.Models.Coffee;
+
+@{
+
+}
+
+
+    <div class="container mx-auto max-w-lg py-28 px-5">
+        <div class="pb-6">
+            <h1 class="font-sans text-4xl tracking-wide pb-6 underline text-center">Edit a Coffee</h1>
+        </div>
+        <form asp-action="Edit">
+        <input asp-for="Id" class="hidden"/>
+        <div asp-validation-summary="ModelOnly" ></div>
+            <div class="mb-3">
+                <label asp-for="Name" class="text-lg pb-1"></label>
+                <input asp-for="Name" type="text" class="font-sans text-lg outline-none border-2 border-black py-1 px-3 w-full">
+                <span asp-validation-for="Name" class="text-red-600" ></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Info" class="text-lg pb-1"></label>
+                <input asp-for="Info" type="text" class="font-sans text-lg outline-none border-2 border-black py-1 px-3 w-full">
+                <span asp-validation-for="Info" class="text-red-600" ></span>
+            </div>
+            <div class="mb-6 grid grid-cols-2 gap-5">
+                <div class="">
+                    <label asp-for="Price" class="text-lg pb-1"></label>
+                    <input asp-for="Price" type="number" class="font-sans text-lg outline-none border-2 border-black py-1 px-3 w-full">
+                    <span asp-validation-for="Price" class="text-red-600" ></span>
+                </div>
+                <div class="">
+                    <label asp-for="Image" class="text-lg pb-1">Image</label>
+                    <input asp-for="Image" type="file" class="py-2">
+                </div>
+            </div>
+           <div class="">
+            <button type="submit" class="font-sans text-lg bg-green-600 py-2 w-full text-white">Submit</button>
+           </div>
+        </form>
+    </div>
+
+    @section Scripts{
+        @{ <partial name="_ValidationScriptsPartial"  />}
+    }

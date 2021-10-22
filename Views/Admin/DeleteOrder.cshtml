@@ -1,0 +1,38 @@
+@model MvcOrder.Models.Order;
+
+@{
+
+}
+
+
+    <div class="container mx-auto max-w-lg py-28 px-5">
+        <div class="pb-6">
+            <h1 class="font-sans text-4xl tracking-wide pb-6 underline text-center">Delete a Order</h1>
+        </div>
+        <form asp-action="DeleteOrderFinal">
+             <input asp-for="Id" class="hidden"/>
+           <div class="grid grid-cols-2 gap-4 mb-3">
+                <div class="">
+                    <input asp-for="Name" disabled type="text" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                </div>
+                <div class="">
+                    <input asp-for="Phone" disabled type="text" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-3">
+                <div class="">
+                    <input asp-for="Email" disabled type="email" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                </div>
+                <div class="">
+                    <input asp-for="TotalPeople" disabled type="number" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                </div>
+            </div>
+           <div class="flex items-center gap-6">
+               <button type="submit" class="text-white bg-red-600 w-full py-2">delete</button>
+           </div>
+        </form>
+    </div>
+
+    @section Scripts{
+        @{ <partial name="_ValidationScriptsPartial"  />}
+    }

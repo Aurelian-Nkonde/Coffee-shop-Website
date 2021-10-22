@@ -1,0 +1,15 @@
+﻿#showcasing{
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('/imgs/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#banner{
+  height: 60vh;
+  background: linear-gradient(rgba(41, 37, 37, 0.781), rgba(17, 6, 6, 0.829)), url('/imgs/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,72 @@
+@model MvcOrder.Models.Order;
+
+@{
+
+}
+
+<div class="container mx-auto max-w-4xl py-28 px-6">
+        <div class="flex flex-col items-center mb-12">
+            <h1 class="font-sans text-4xl tracking-wide pb-2">Book a Table</h1>
+            <img src="/imgs/coffee.jpg" alt="" class="h-20 w-24">
+            <p class="max-w-lg mx-auto text-center py-2 font-sans text-lg" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi mollitia tempora placeat quidem minima!</p>
+        </div>
+
+        <form asp-action="Order">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="grid grid-cols-2 gap-4 mb-3">
+                <div class="">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" type="text" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                    <span asp-validation-for="Name" class="text-red-400"></span>
+                </div>
+                <div class="">
+                    <label asp-for="Phone"></label>
+                    <input asp-for="Phone" type="text" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                    @* <span asp-validation-for="Phone" class="text-red-400"></span> *@
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-3">
+                <div class="">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" type="email" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                    <span asp-validation-for="Email" class="text-red-400"></span>
+                </div>
+                <div class="">
+                    <label asp-for="TotalPeople"></label>
+                    <input asp-for="TotalPeople" type="number" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                    <span asp-validation-for="TotalPeople" class="text-red-400"></span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-3">
+                <div class="">
+                    <label asp-for="CoffeeNames"></label>
+                    <input asp-for="CoffeeNames" type="text" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                    <span asp-validation-for="CoffeeNames" class="text-red-400"></span>
+                </div>
+                <div class="">
+                    <label asp-for="TotalCoffees"></label>
+                    <input asp-for="TotalCoffees" type="number" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                    <span asp-validation-for="TotalCoffees" class="text-red-400"></span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-10">
+                <div class="">
+                    <label asp-for=" DateBooking"></label>
+                    <input asp-for=" DateBooking" type="date" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                    <span asp-validation-for="DateBooking" class="text-red-400"></span>
+                </div>
+                <div class="">
+                    <label>Time</label>
+                    <input type="datetime" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
+                </div>
+            </div>
+            <div class="">
+                <button type="submit" class="font-sans text-white text-lg shadow-lg bg-yellow-600 py-3 px-10 w-full transition ease-in-out duration-150 hover:bg-yellow-700">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+    @section Scripts{
+        @{ <partial name="_ValidationScriptsPartial" /> }
+    }
