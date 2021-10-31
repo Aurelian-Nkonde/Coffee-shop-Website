@@ -2,3 +2,8 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+const btn = document.getElementById("btn")
+const curten = document.getElementById("curten")
+btn.addEventListener("click", () => {
+    curten.classList.toggle("hidden")
+})

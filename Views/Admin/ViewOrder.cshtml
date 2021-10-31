@@ -4,9 +4,9 @@
 
 }
 
-<div class="container mx-auto max-w-4xl py-28 px-6">
+<div class="container mx-auto max-w-4xl py-28 px-8">
         <div class="flex flex-col items-center mb-12">
-            <h1 class="font-sans text-4xl tracking-wide pb-2">Order Details</h1>
+            <h1 class="font-sans text-3xl md:text-4xl tracking-wide pb-2">Order Details</h1>
         </div>
 
         <form asp-action="Order">
@@ -45,7 +45,7 @@
                     <label asp-for="DateBooking"></label>
                     <input disabled asp-for=" DateBooking" type="date" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
                 </div>
-                <div class="">
+                <div class="hidden">
                     <input disabled type="datetime" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
                 </div>
             </div>

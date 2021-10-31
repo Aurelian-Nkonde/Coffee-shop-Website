@@ -5,28 +5,28 @@
 
 }
 
-    <div class="container mx-auto max-w-4xl py-28 px-5">
+    <div class="container mx-auto max-w-4xl py-28 px-8">
         <div class="pb-6">
-            <h1 class="font-sans text-4xl tracking-wide pb-6 underline text-center">Esta Coffee_shop</h1>
-            <h1 class="font-sans text-4xl tracking-wide pb-6 underline text-center"> Admin-Panel</h1>
+            <h1 class="font-sans text-3xl md:text-4xl tracking-wide pb-6 underline text-center">Esta Coffee_shop</h1>
+            <h1 class="font-sans text-3xl md:text-4xl tracking-wide pb-6 underline text-center"> Admin-Panel</h1>
         </div>
         
         <div class="max-w-lx mx-auto bg-gray-900 p-12 pt-8">
             <div class="grid grid-cols-3 py-3">
-                <p class="font-sans text-2xl col-span-2 text-white">Number of Orders</p>
-                <p class="font-sans text-2xl font-bold text-white"> @Model.Count() </p>
+                <p class="font-sans text-xl md:text-2xl col-span-2 text-white">Number of Orders</p>
+                <p class="font-sans text-xl md:text-2xl font-bold text-white"> @Model.Count() </p>
             </div>
         </div>
 
 
         <div class="max-w-lx mx-auto  p-12 pt-8">
-            <h1 class="font-sans text-4xl mb-4">List of Orders</h1>
+            <h1 class="font-sans text-3xl md:text-4xl mb-4">List of Orders</h1>
 
             @if (Model.Count() > 0)
             {
                 @foreach(var order in Model)
                 {
-                    <div class="grid grid-cols-2 items-center justify-around mb-2">
+                    <div class="grid grid-cols-2 items-center justify-around mb-2 border-2 border-gray-600 py-1 px-3">
                         <h1 class="font-sans text-xl">@order.Name</h1>
                         <div class="flex gap-4 items-center">
                             <a asp-route-Id="@order.Id" asp-controller="Admin" asp-action="ViewOrder" class="text-sans bg-green-600 py-2 px-4 transition ease-in-out duration-150 hover:bg-green-700 text-white">View</a>

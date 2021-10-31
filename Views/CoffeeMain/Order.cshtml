@@ -13,7 +13,7 @@
 
         <form asp-action="Order">
             <div asp-validation-summary="ModelOnly"></div>
-            <div class="grid grid-cols-2 gap-4 mb-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
                 <div class="">
                     <label asp-for="Name"></label>
                     <input asp-for="Name" type="text" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
@@ -25,7 +25,7 @@
                     @* <span asp-validation-for="Phone" class="text-red-400"></span> *@
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-4 mb-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
                 <div class="">
                     <label asp-for="Email"></label>
                     <input asp-for="Email" type="email" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
@@ -37,7 +37,7 @@
                     <span asp-validation-for="TotalPeople" class="text-red-400"></span>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-4 mb-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
                 <div class="">
                     <label asp-for="CoffeeNames"></label>
                     <input asp-for="CoffeeNames" type="text" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">
@@ -49,7 +49,7 @@
                     <span asp-validation-for="TotalCoffees" class="text-red-400"></span>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-4 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                 <div class="">
                     <label asp-for=" DateBooking"></label>
                     <input asp-for=" DateBooking" type="date" class="font-sans text-lg outline-none border-2 border-black py-2 px-3 w-full">

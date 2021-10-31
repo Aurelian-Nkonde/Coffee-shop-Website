@@ -5,28 +5,28 @@
 
 }
 
-<div class="container mx-auto max-w-4xl py-28 px-5">
+<div class="container mx-auto max-w-4xl py-28 px-8">
         <div class="pb-6">
-            <h1 class="font-sans text-4xl tracking-wide pb-6 underline text-center">Esta Coffee_shop</h1>
-            <h1 class="font-sans text-4xl tracking-wide pb-6 underline text-center"> Admin-Panel</h1>
+            <h1 class="font-sans text-3xl md:text-4xl tracking-wide pb-6 underline text-center">Esta Coffee_shop</h1>
+            <h1 class="font-sans text-3xl md:text-4xl tracking-wide pb-6 underline text-center"> Admin-Panel</h1>
         </div>
         <div class="flex justify-between mb-10">
             <div class=""></div>
             <div class="">
-                <a asp-action="Create"  class="font-sans text-lg text-white bg-yellow-700 rounded-sm py-2 px-7 transition ease-in-out duration-200 hover:bg-yellow-600">Add a Coffee</a>
+                <a asp-action="Create"  class="font-sans text-lg text-white bg-yellow-700 rounded-sm py-2 px-5 md:px-7 transition ease-in-out duration-200 hover:bg-yellow-600">Add a Coffee</a>
             </div>
         </div>
         <hr>
         <div class="max-w-lx mx-auto bg-gray-900 p-12 pt-8 mb-7">
             <div class="grid grid-cols-3 py-3 text-white">
-                <p class="font-sans text-2xl col-span-2 text-white">Available types of Coffees</p>
+                <p class="font-sans text-xl md:text-2xl col-span-2 text-white">Available types of Coffees</p>
                 @if (Model.Count() > 0)
                 {
                     <p class="font-sans text-2xl font-bold"> @Model.Count() </p>
                 }
                 else
                 {
-                    <p class="font-sans text-2xl font-bold text-red-600"> None </p>
+                    <p class="font-sans text-2xl font-bold text-red-500"> None </p>
                 }
             </div>
             <hr>
@@ -34,15 +34,15 @@
 
 
         <div class="max-w-lx mx-auto  p-12 pt-8">
-            <h1 class="font-sans text-4xl mb-4">List of Coffee types</h1>
+            <h1 class="font-sans text-3xl md:text-4xl mb-4">List of Coffee types</h1>
 
             @if (Model.Count() > 0)
             {
                 @foreach(var coff in Model)
                 {
-                    <div class="grid grid-cols-2 items-center justify-around mb-2">
+                    <div class=" grid grid-cols-2 items-center justify-around mb-2 border-2 border-gray-600 py-1 px-3">
                         <h1 class="font-sans text-xl">@coff.Name</h1>
-                        <div class="flex gap-4 items-center">
+                        <div class="flex items-right gap-4 items-center">
                             <a asp-route-Id="@coff.Id" asp-controller="Admin" asp-action="Edit" class="text-sans bg-green-600 py-2 px-4 transition ease-in-out duration-150 hover:bg-green-700 text-white">Edit</a>
                             <a asp-route-Id="@coff.Id" asp-controller="Admin" asp-action="Delete" class="text-sans bg-red-600 py-2 px-4 transition ease-in-out duration-150 hover:bg-red-700 text-white">Delete</a>
                         </div>
